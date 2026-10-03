@@ -1,9 +1,9 @@
-const disableSetup = false;
-const disableLdCfg = false;
-var topBarCenterText = "KR4DHF";
+const disableSetup = true;
+const disableLdCfg = true;
+var topBarCenterText = "Bolivia - Station 7";
 
 // Grid layout desired
-var layout_cols = 4;
+var layout_cols = 2;
 var layout_rows = 3;
 
 // Menu items
@@ -11,20 +11,6 @@ var layout_rows = 3;
 // The values are [color code, menu text, target link, scale factor, side],
 // add new lines following the structure for extra menu options. The comma at the end is important!
 var aURL = [
-  [
-    "#2196f3",
-    "Propagation Map",
-    "https://muf.hb9vqq.ch/",
-    1,
-    "L"
-  ],
-  [
-    "#2196f3",
-    "DX CLUSTER",
-    "https://dxcluster.ha8tks.hu/map/",
-    1,
-    "L"
-  ],
   [
     "#2196f3",
     "LIGHTNING",
@@ -57,64 +43,19 @@ var aURL = [
 var aIMG = [
   [
     "Radar",
-    "https://radar.weather.gov/ridge/standard/CONUS-LARGE_loop.gif",
     "https://radar.weather.gov/ridge/standard/SOUTHEAST_loop.gif",
     "https://radar.weather.gov/ridge/standard/KLTX_loop.gif",
-    "https://radar.weather.gov/ridge/standard//base_velocity/KLTX_loop.gif"
+    
   ],
   [
-    "GOES19 CONUS",
-    "https://cdn.star.nesdis.noaa.gov/GOES19/ABI/CONUS/Sandwich/GOES19-CONUS-Sandwich-625x375.gif",
-    "https://cdn.star.nesdis.noaa.gov/GOES16/GLM/CONUS/EXTENT3/GOES16-CONUS-EXTENT3-625x375.gif"
+    "Weather Maps",
+    "https://www.weather.gov/images/rah/statebrief/MaxT_SFC-Day1State.png",
+    "https://www.weather.gov/wwamap/png/ilm.png",
   ],
   [
-    "GOES19 Southeast",
-    "https://cdn.star.nesdis.noaa.gov/GOES19/ABI/SECTOR/se/Sandwich/GOES19-SE-Sandwich-600x600.gif",
-    "https://cdn.star.nesdis.noaa.gov/GOES19/GLM/SECTOR/se/EXTENT3/GOES19-SE-EXTENT3-600x600.gif"
-  ],
-  [
-    "GOES19 Atlantic Basin",
-    "https://cdn.star.nesdis.noaa.gov/GOES19/ABI/SECTOR/taw/Sandwich/GOES19-TAW-Sandwich-900x540.gif",
-    "https://cdn.star.nesdis.noaa.gov/GOES19/GLM/SECTOR/taw/EXTENT3/GOES19-TAW-EXTENT3-900x540.gif",
-    "https://tropic.ssec.wisc.edu/real-time/atlantic/images/irng8.GIF",
-    "https://tropic.ssec.wisc.edu/real-time/mtpw2/webAnims/tpw_nrl_colors/natl/mimictpw_natl_latest.gif"
-  ],
-  [
-    "Traffic Cams",
-    "https://eapps.ncdot.gov/services/traffic-prod/v1/cameras/images?filename=I140_US17BUS_W2.jpg",
-    "https://eapps.ncdot.gov/services/traffic-prod/v1/cameras/images?filename=Wilimington_01.JPG"
-  ],
-  [
-    "Area Live Cams",
-    "iframe|https://www.youtube.com/embed/sBtvpwKH2BE?autoplay=1&mute=1",
-    "iframe|https://www.youtube.com/embed/Dizx0Z2eDv8?autoplay=1&mute=1",
-    "iframe|https://www.youtube.com/embed/lcANlrXCR0Q?autoplay=1&mute=1",
-    "iframe|https://www.youtube.com/embed/itXoEFJZtD0?autoplay=1&mute=1",
-    "iframe|https://www.youtube.com/embed/GKOyGoRE0Tg?autoplay=1&mute=1"
-  ],
-  [
-    "Southport Cam",
-    "iframe|https://www.surfchex.com/sppssl.php"
-  ],
-  [
-    "ISS Live Feed",
-    // "iframe|https://www.youtube.com/embed/H999s0P1Er0?autoplay=1&mute=1"
-    "iframe|https://www.youtube.com/embed/zPH5KtjJFaQ?autoplay=1&mute=1"
-  ],
-  [
-    "KLTX Local Wx",
+    "Weather Outlook",
     "https://www.weather.gov//images/ilm/WxStory/WeatherStory1.png",
     "https://www.weather.gov//images/ilm/WxStory/WeatherStory5.png",
-    "https://www.weather.gov/images/rah/statebrief/MaxT_SFC-Day1State.png",
-    "https://www.weather.gov/wwamap/png/ilm.png"
-  ],
-  [
-    "Ocean Stats",
-    "https://wave.marineweather.net/itide/tides/png/nc_oak_island_yaupon_beach.png",
-    "https://oifdweather.pythonanywhere.com/static/current_flag.png",
-    "https://graphical.weather.gov/GraphicalNDFD.php?width=515&timezone=EDT&sector=ILM&element=t&n=1",
-    "https://graphical.weather.gov/GraphicalNDFD.php?width=515&timezone=EDT&sector=ILM&element=wwa&n=1"
-    // "https://www.ospo.noaa.gov/data/cb/ssta/ssta.daily.current.png"
   ],
   [
     "Hurricane Outlook",
@@ -125,6 +66,9 @@ var aIMG = [
     "Fire Weather",
     "https://www.weather.gov/images/ilm/ghwo/FireWeatherDay1.jpg",
     "https://www.spc.noaa.gov/products/fire_wx/day1otlk_fire.png",
+  ],
+  [
+    "Fire Outlook",
     "https://droughtmonitor.unl.edu/data/png/current/current_wfoilm_trd.png",
     "https://www.weather.gov/images/ilm/GraphiDSSforDSSBuilder/MaxHeatIndex_D1.png",
     "https://www.weather.gov/images/ilm/GraphiDSSforDSSBuilder/MinRH_Day1.png"
@@ -133,9 +77,9 @@ var aIMG = [
 
 // Image rotation intervals in milliseconds per tile - If the line below is commented, tiles will be rotated every 5000 milliseconds (5s)
 var tileDelay = [
-  10000,  10000,  10000,  10000,
-  5000,   10000,  100000, 0,
-  5000,   5000,   5000,   10000
+  10000,  10000,
+  10000,  10000,
+  10000,  10000
 ];
 
 // RSS feed items
