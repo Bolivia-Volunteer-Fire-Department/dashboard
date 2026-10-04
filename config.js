@@ -3,8 +3,8 @@ const disableLdCfg = true;
 var topBarCenterText = "Bolivia - Station 7";
 
 // Grid layout desired
-var layout_cols = 2;
-var layout_rows = 3;
+var layout_cols = 1;
+var layout_rows = 2;
 
 // Menu items
 // Structure is as follows HTML Color code, Option, target URL, scaling 1=Original Size, side (optional, nothing is Left, "R" is Right)
@@ -45,41 +45,27 @@ var aIMG = [
     "Radar",
     "https://radar.weather.gov/ridge/standard/SOUTHEAST_loop.gif",
     "https://radar.weather.gov/ridge/standard/KLTX_loop.gif",
-    
-  ],
-  [
-    "Weather Maps",
     "https://www.weather.gov/images/rah/statebrief/MaxT_SFC-Day1State.png",
     "https://www.weather.gov/wwamap/png/ilm.png",
-  ],
-  [
-    "Weather Outlook",
+    "https://www.nhc.noaa.gov/xgtwo/two_atl_7d0.png",
+    "https://www.nhc.noaa.gov/xgtwo/two_pac_7d0.png",
     "https://www.weather.gov//images/ilm/WxStory/WeatherStory1.png",
     "https://www.weather.gov//images/ilm/WxStory/WeatherStory5.png",
-  ],
-  [
-    "Hurricane Outlook",
-    "https://www.nhc.noaa.gov/xgtwo/two_atl_7d0.png",
-    "https://www.nhc.noaa.gov/xgtwo/two_pac_7d0.png"
   ],
   [
     "Fire Weather",
     "https://www.weather.gov/images/ilm/ghwo/FireWeatherDay1.jpg",
     "https://www.spc.noaa.gov/products/fire_wx/day1otlk_fire.png",
-  ],
-  [
-    "Fire Outlook",
     "https://droughtmonitor.unl.edu/data/png/current/current_wfoilm_trd.png",
     "https://www.weather.gov/images/ilm/GraphiDSSforDSSBuilder/MaxHeatIndex_D1.png",
     "https://www.weather.gov/images/ilm/GraphiDSSforDSSBuilder/MinRH_Day1.png"
-  ]
+  ],
 ];
 
 // Image rotation intervals in milliseconds per tile - If the line below is commented, tiles will be rotated every 5000 milliseconds (5s)
 var tileDelay = [
-  10000,  10000,
-  10000,  10000,
-  10000,  10000
+  10000,  
+  10000
 ];
 
 // RSS feed items
